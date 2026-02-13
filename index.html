@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PYRVOLT | Fire & Electrical Services</title>
+<title>PyroVolt | Fire & Electrical Services</title>
 
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
@@ -18,19 +19,13 @@
     --white: #FFFFFF;
 }
 
+/* GLOBAL STYLES */
 * { margin:0; padding:0; box-sizing:border-box; }
-
-body {
-    font-family:'Inter', sans-serif;
-    background:#f4f4f4;
-    color:var(--charcoal);
-    line-height:1.6;
-}
-
+body { font-family:'Inter', sans-serif; background:#f4f4f4; color:var(--charcoal); line-height:1.6; }
 h1,h2,h3 { font-family:'Montserrat', sans-serif; text-transform:uppercase; letter-spacing:2px; }
-
 section { padding:90px 10%; position:relative; }
 
+/* HEADER */
 header {
     background:var(--deep-navy);
     padding:20px 10%;
@@ -39,17 +34,11 @@ header {
     align-items:center;
     border-bottom:4px solid var(--flame-red);
 }
-
 header img { height:60px; }
-
-nav a {
-    color:var(--white);
-    text-decoration:none;
-    margin-left:30px;
-    font-weight:600;
-}
+nav a { color:var(--white); text-decoration:none; margin-left:30px; font-weight:600; }
 nav a:hover { color:var(--electric-yellow); }
 
+/* HERO */
 .hero {
     background: linear-gradient(rgba(11,44,74,0.85), rgba(11,44,74,0.85)),
                 url('https://images.unsplash.com/photo-1581091870627-3d6a89b0d6d7?auto=format&fit=crop&w=1400&q=80');
@@ -61,7 +50,6 @@ nav a:hover { color:var(--electric-yellow); }
 }
 .hero h1 { font-size:48px; margin-bottom:20px; }
 .hero p { font-size:20px; margin-bottom:30px; }
-
 .btn {
     display:inline-block;
     padding:14px 30px;
@@ -76,6 +64,7 @@ nav a:hover { color:var(--electric-yellow); }
 .btn-secondary { background:var(--flame-red); color:var(--white); border:none; }
 .btn-secondary:hover { background:var(--deep-orange); border:2px solid var(--flame-red); }
 
+/* SERVICES */
 .services { background:#ffffff; }
 .services h2 { text-align:center; margin-bottom:50px; }
 .service-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; margin-top:40px; }
@@ -89,10 +78,12 @@ nav a:hover { color:var(--electric-yellow); }
 .service-box.fire { border-color:var(--flame-red); }
 .service-box:hover { transform:translateY(-5px); }
 
+/* ABOUT */
 .about { background:#f4f4f4; text-align:center; padding:80px 10%; }
 .about h2 { margin-bottom:20px; }
 .about p { max-width:900px; margin:auto; font-size:16px; line-height:1.8; }
 
+/* CONTACT */
 .contact {
     background:var(--deep-navy);
     color:var(--white);
@@ -105,18 +96,21 @@ nav a:hover { color:var(--electric-yellow); }
 .contact button { background:var(--electric-yellow); color:var(--deep-navy); padding:14px; font-weight:bold; border:none; cursor:pointer; margin-top:10px; transition:0.3s; }
 .contact button:hover { background:var(--flame-red); color:var(--white); }
 
+/* FOOTER */
 footer { background:#000; color:var(--white); text-align:center; padding:20px; font-size:14px; }
 
+/* RESPONSIVE */
 @media (max-width:768px){
     .hero h1{font-size:32px;}
     .service-grid{grid-template-columns:1fr;}
 }
 </style>
 </head>
+
 <body>
 
 <header>
-    <img src="logo.png" alt="PYRVOLT Logo">
+    <img src="logo.png" alt="PyroVolt Logo">
     <nav>
         <a href="#services">Services</a>
         <a href="#about">About</a>
@@ -144,7 +138,7 @@ footer { background:#000; color:var(--white); text-align:center; padding:20px; f
         </div>
         <div class="service-box">
             <h3>Electrical Installations</h3>
-            <p>Industrial, commercial and domestic projects.</p>
+            <p>Commercial and domestic projects.</p>
         </div>
         <div class="service-box">
             <h3>Inspection & Testing</h3>
@@ -154,9 +148,9 @@ footer { background:#000; color:var(--white); text-align:center; padding:20px; f
 </section>
 
 <section id="about" class="about">
-    <h2>About PYRVOLT</h2>
+    <h2>About PyroVolt</h2>
     <p>
-        PYRVOLT Fire & Electrical Services delivers reliable and compliant solutions for commercial and domestic clients. Our team ensures every project is safe, efficient, and professionally completed.
+        PyroVolt Fire & Electrical Services delivers reliable and compliant solutions for commercial and domestic clients. Every project is completed professionally and safely.
     </p>
 </section>
 
@@ -172,7 +166,7 @@ footer { background:#000; color:var(--white); text-align:center; padding:20px; f
 </section>
 
 <footer>
-    © 2026 PYRVOLT Fire & Electrical Services
+    © 2026 PyroVolt Fire & Electrical Services
 </footer>
 
 </body>
