@@ -5,104 +5,158 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>PyroVolt | Fire & Electrical Services</title>
 
-<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 :root {
-    --flame-red: #D7261E;
-    --deep-orange: #F25C05;
-    --electric-yellow: #FFC300;
-    --electric-blue: #0A58A8;
-    --deep-navy: #0B2C4A;
-    --charcoal: #111111;
-    --white: #FFFFFF;
+    --red:#D7261E;
+    --orange:#F25C05;
+    --yellow:#FFC300;
+    --blue:#0A58A8;
+    --navy:#0B2C4A;
+    --dark:#0E0E0E;
+    --light:#F4F4F4;
+    --white:#FFFFFF;
 }
 
-/* GLOBAL STYLES */
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Inter', sans-serif; background:#f4f4f4; color:var(--charcoal); line-height:1.6; }
-h1,h2,h3 { font-family:'Montserrat', sans-serif; text-transform:uppercase; letter-spacing:2px; }
-section { padding:90px 10%; position:relative; }
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body {
+    font-family:'Inter', sans-serif;
+    background:var(--light);
+    color:var(--dark);
+}
 
 /* HEADER */
 header {
-    background:var(--deep-navy);
-    padding:20px 10%;
+    background:var(--navy);
+    padding:18px 10%;
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    border-bottom:4px solid var(--flame-red);
+    justify-content:space-between;
+    border-bottom:4px solid var(--red);
 }
-header img { height:60px; }
-nav a { color:var(--white); text-decoration:none; margin-left:30px; font-weight:600; }
-nav a:hover { color:var(--electric-yellow); }
+
+header img {
+    height:58px;
+}
+
+nav a {
+    color:var(--white);
+    text-decoration:none;
+    margin-left:25px;
+    font-weight:600;
+}
 
 /* HERO */
 .hero {
-    background: linear-gradient(rgba(11,44,74,0.85), rgba(11,44,74,0.85)),
-                url('https://images.unsplash.com/photo-1581091870627-3d6a89b0d6d7?auto=format&fit=crop&w=1400&q=80');
-    background-size: cover;
-    background-position: center;
+    background:
+        linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.75)),
+        url('https://images.unsplash.com/photo-1581092160607-ee22621dd758');
+    background-size:cover;
+    background-position:center;
     color:var(--white);
-    text-align:center;
     padding:140px 10%;
 }
-.hero h1 { font-size:48px; margin-bottom:20px; }
-.hero p { font-size:20px; margin-bottom:30px; }
-.btn {
-    display:inline-block;
-    padding:14px 30px;
-    font-weight:700;
+
+.hero h1 {
+    font-family:'Montserrat', sans-serif;
+    font-size:3.2rem;
     text-transform:uppercase;
-    margin:10px;
-    cursor:pointer;
-    transition:0.3s;
+    line-height:1.2;
 }
-.btn-primary { background:var(--electric-blue); color:var(--white); border:none; }
-.btn-primary:hover { background:var(--deep-navy); border:2px solid var(--electric-blue); }
-.btn-secondary { background:var(--flame-red); color:var(--white); border:none; }
-.btn-secondary:hover { background:var(--deep-orange); border:2px solid var(--flame-red); }
+
+.hero span {
+    color:var(--orange);
+}
+
+.hero p {
+    margin-top:20px;
+    max-width:520px;
+    font-size:1.1rem;
+}
+
+.hero a {
+    display:inline-block;
+    margin-top:30px;
+    background:var(--red);
+    color:white;
+    padding:14px 32px;
+    font-weight:700;
+    text-decoration:none;
+    border-radius:4px;
+}
+
+/* SECTIONS */
+section {
+    padding:90px 10%;
+}
+
+h2 {
+    font-family:'Montserrat', sans-serif;
+    text-transform:uppercase;
+    margin-bottom:40px;
+    font-size:2.2rem;
+    color:var(--navy);
+}
 
 /* SERVICES */
-.services { background:#ffffff; }
-.services h2 { text-align:center; margin-bottom:50px; }
-.service-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:30px; margin-top:40px; }
-.service-box {
-    background:#ffffff;
-    padding:30px;
-    border-left:6px solid var(--electric-blue);
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    transition:0.3s;
+.services {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
 }
-.service-box.fire { border-color:var(--flame-red); }
-.service-box:hover { transform:translateY(-5px); }
 
-/* ABOUT */
-.about { background:#f4f4f4; text-align:center; padding:80px 10%; }
-.about h2 { margin-bottom:20px; }
-.about p { max-width:900px; margin:auto; font-size:16px; line-height:1.8; }
+.service {
+    background:white;
+    padding:30px;
+    border-left:6px solid var(--red);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.service h3 {
+    margin-bottom:12px;
+}
 
 /* CONTACT */
 .contact {
-    background:var(--deep-navy);
-    color:var(--white);
-    text-align:center;
-    padding:100px 10%;
+    background:var(--navy);
+    color:white;
 }
-.contact h2 { margin-bottom:20px; }
-.contact form { max-width:500px; margin:auto; display:flex; flex-direction:column; }
-.contact input, .contact textarea { padding:12px; margin:8px 0; border-radius:6px; border:none; }
-.contact button { background:var(--electric-yellow); color:var(--deep-navy); padding:14px; font-weight:bold; border:none; cursor:pointer; margin-top:10px; transition:0.3s; }
-.contact button:hover { background:var(--flame-red); color:var(--white); }
+
+.contact form {
+    max-width:600px;
+}
+
+.contact input,
+.contact textarea {
+    width:100%;
+    padding:14px;
+    margin-bottom:15px;
+    border:none;
+    font-family:inherit;
+}
+
+.contact button {
+    background:var(--orange);
+    color:white;
+    padding:14px 30px;
+    border:none;
+    font-weight:700;
+    cursor:pointer;
+}
 
 /* FOOTER */
-footer { background:#000; color:var(--white); text-align:center; padding:20px; font-size:14px; }
-
-/* RESPONSIVE */
-@media (max-width:768px){
-    .hero h1{font-size:32px;}
-    .service-grid{grid-template-columns:1fr;}
+footer {
+    background:#000;
+    color:#aaa;
+    text-align:center;
+    padding:25px;
+    font-size:.9rem;
 }
 </style>
 </head>
@@ -113,60 +167,46 @@ footer { background:#000; color:var(--white); text-align:center; padding:20px; f
     <img src="logo.png" alt="PyroVolt Logo">
     <nav>
         <a href="#services">Services</a>
-        <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </nav>
 </header>
 
 <section class="hero">
-    <h1>Fire & Electrical Services</h1>
-    <p>Reliable. Compliant. Built to Last.</p>
-    <a href="#contact" class="btn btn-primary">Request a Quote</a>
-    <a href="#services" class="btn btn-secondary">Our Services</a>
+    <h1>Fire & Electrical<br><span>Services You Can Trust</span></h1>
+    <p>Professional domestic and commercial electrical work with a focus on safety, reliability, and quality workmanship.</p>
+    <a href="#contact">Request a Callback</a>
 </section>
 
-<section id="services" class="services">
+<section id="services">
     <h2>Our Services</h2>
-    <div class="service-grid">
-        <div class="service-box fire">
-            <h3>Fire Alarm Systems</h3>
-            <p>Installation, maintenance and compliance testing.</p>
-        </div>
-        <div class="service-box fire">
-            <h3>Emergency Lighting</h3>
-            <p>Design, installation and certification services.</p>
-        </div>
-        <div class="service-box">
+    <div class="services">
+        <div class="service">
             <h3>Electrical Installations</h3>
-            <p>Commercial and domestic projects.</p>
+            <p>Full and partial installs for domestic and commercial properties.</p>
         </div>
-        <div class="service-box">
-            <h3>Inspection & Testing</h3>
-            <p>Certified inspection and compliance reporting.</p>
+        <div class="service">
+            <h3>Fire Alarm Systems</h3>
+            <p>Design, installation, and maintenance of fire alarm systems.</p>
+        </div>
+        <div class="service">
+            <h3>Testing & Inspection</h3>
+            <p>EICR reports, fault finding, and safety inspections.</p>
         </div>
     </div>
 </section>
 
-<section id="about" class="about">
-    <h2>About PyroVolt</h2>
-    <p>
-        PyroVolt Fire & Electrical Services delivers reliable and compliant solutions for commercial and domestic clients. Every project is completed professionally and safely.
-    </p>
-</section>
-
 <section id="contact" class="contact">
-    <h2>Request a Booking</h2>
-    <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Job Details" rows="5" required></textarea>
-        <button type="submit">Send Request</button>
+    <h2>Contact PyroVolt</h2>
+    <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="How can we help?" required></textarea>
+        <button type="submit">Send Enquiry</button>
     </form>
-    <p style="margin-top:20px;">Or email directly: <a href="mailto:daryl@pyrovoltelectrical.co.uk" style="color:#FFC300;">daryl@pyrovoltelectrical.co.uk</a></p>
 </section>
 
 <footer>
-    © 2026 PyroVolt Fire & Electrical Services
+    © PyroVolt Fire & Electrical Services
 </footer>
 
 </body>
